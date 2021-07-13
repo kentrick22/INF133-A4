@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Log Sleep</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <lottie-player slot="end" autoplay loop src="https://assets6.lottiefiles.com/packages/lf20_cFaBp6.json"></lottie-player>
+  </ion-item>
+  <ion-item>
+    <h1 style="color: #202B73;">Track your sleeping habit</h1>
+  </ion-item>
+  <ion-item>
+    <p style="color: #202B73;">Log it by entering the bedtime and wake-up time</p>
+  </ion-item>
+  <!--Bedtime-->
+  <ion-item>
+    <ion-label position="floating" style="color: #202B73; font-weight: bold; font-size: 20px;">Bedtime</ion-label>
+    <ion-datetime display-format="MM.DD.YYYY HH:mm" placeholder="Select Start Date" [(ngModel)]="startDateString" style="color: #D64B82;"></ion-datetime>
+  </ion-item>
+  <!--Wake-up time-->
+  <ion-item>
+    <ion-label position="floating" style="color: #202B73; font-weight: bold; font-size: 20px;">Wake-up time</ion-label>
+    <ion-datetime display-format="MM.DD.YYYY HH:mm" placeholder="Select End Date" [(ngModel)]="endDateString" style="color: #D64B82;"></ion-datetime>
+  </ion-item>
+  <!--Button-->
+  <ion-button expand="block" (click)="submitClicked()">Submit</ion-button>
+</ion-content>

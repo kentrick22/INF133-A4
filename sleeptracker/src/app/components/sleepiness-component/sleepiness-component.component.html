@@ -1,0 +1,104 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Log Sleepiness</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <lottie-player slot="end" autoplay loop src="https://assets6.lottiefiles.com/packages/lf20_cFaBp6.json"></lottie-player>
+  </ion-item>
+  <ion-item>
+    <h1 style="color: #202B73;">Track your sleepiness during the day</h1>
+  </ion-item>
+  <ion-item>
+    <p style="color: #202B73;">Log it by dragging the level of your sleepiness. <br/><b>References:</b></p>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="accessibility"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 1</h2>
+        <h3 style="color: #D64B82;">Active</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="accessibility"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 2</h2>
+        <h3 style="color: #D64B82;">Active</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="eye"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 3</h2>
+        <h3 style="color: #D64B82;">Awake</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="eye"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 4</h2>
+        <h3 style="color: #D64B82;">Awake</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="eye"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 5</h2>
+        <h3 style="color: #D64B82;">Awake</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="moon"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 6</h2>
+        <h3 style="color: #D64B82;">Sleepy</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="moon"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2 style="color: #202B73; font-weight: bold;">Level 7</h2>
+        <h3 style="color: #D64B82;">Sleepy</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <!--Sleepiness Range-->
+    <ion-range min="1" max="7" step="1" snaps="true" pin="true" color="danger" [(ngModel)]="level">
+      <p slot="start">1</p>
+      <p slot="end">7</p>
+    </ion-range>
+    <!--Button-->
+    <ion-button expand="block" (click)="submitClicked()">Submit</ion-button>
+  </ion-item>
+</ion-footer>

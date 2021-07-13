@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="new-background-color">
+    <ion-title style="color: #D64B82;">Overnight Sleep</ion-title>
+    <ion-button slot="end" shape="round" fill="clear" size="small" (click)="openModal()">
+      <ion-icon name="add" size="large"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <div class="flex-container-col1">
+      <div class="a" style="color: white">Record of your</div>
+      <div class="b" style="color: white">Overnight Sleep</div>
+    </div>
+  </ion-item>
+
+  <ion-card *ngFor="let sleep of sleepArray">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="flex-container-card">
+          <div style="color: #202B73; font-weight: bold;">{{sleep.dateString()}}</div>
+          <ion-icon name="bed" style="color: #202B73;"></ion-icon>
+          <p style="color:#202B73; font-size: 18px; margin-left: 10px; margin-top: -2px;">Time frame: {{sleep.timeString()}}</p>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+    <!-- <ion-item lines="none">
+      <ion-label text-wrap slot="start">
+        <h2>{{sleep.dateString()}}</h2>
+        <h2>{{sleep.timeString()}}</h2>
+        <h3>Overnight Sleep</h3>
+      </ion-label>
+      <ion-icon name="bed" slot="end" size="large"></ion-icon>
+    </ion-item> -->
+
+    <ion-card-content>
+      <div class="flex-container-card-content">
+        <div class="a">
+          <div style="margin-left: 10px; color: #D64B82;">{{sleep.summaryString()}}</div>
+          <p style="margin-left: 10px; font-size: 18px; color: #202B73; font-weight: bold;">hours</p>
+        </div>
+        <div class="b">
+          <p style="font-size: 18px; color: #202B73; font-weight: bold;">Quality</p>
+          <div style="color: #D64B82; font-weight: bold;">{{sleep.ratingString()}}</div>
+        </div>
+        <!-- <div><p style="font-size: 20px">Quality</p>hours</div> -->
+      </div>
+    </ion-card-content>
+
+    <!-- <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8">
+            <p class="sleepinessScore">{{sleep.summaryString()}}</p>
+            <p class="sleepinessQuality"> hours</p>
+          </ion-col>
+          <ion-col>
+            <p>Quality</p>
+            <p>{{sleep.ratingString()}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content> -->
+  </ion-card>
+
+</ion-content>

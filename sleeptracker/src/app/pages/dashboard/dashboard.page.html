@@ -1,0 +1,117 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <div>
+      <h1>Hello,</h1>
+      <h2>Kentrick!</h2>
+      <p>Here's the overview of your sllep record:</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Avg. Duration</ion-col>
+          <ion-col>Recorded Sleep</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Longest Night</ion-col>
+          <ion-col>Shortest Night</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-item>
+</ion-content> -->
+
+<!-- <ion-header class = "ion-no-border">
+  <ion-item lines = "none">
+    <ion-avatar slot = "start">
+      <img src = "assets/images/face.png" alt="Profile Picture">
+    </ion-avatar>
+    <ion-label>
+      <ion-label-top>
+        <p style = "font-size: 18px">Welcome back,</p>
+        <p style = "font-size: 25px"><i>Kentrick.</i></p>
+      </ion-label-top>
+    </ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-label>
+  <ion-label-mid>
+    <p style = "font-size: 24px">Last night</p>
+    <p style = "font-size: 36px">Sleeping habit</p>
+  </ion-label-mid>
+</ion-label> -->
+
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title style="color: #D64B82;">Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <div class="flex-container">
+      <div style="color: white; margin-bottom: 20px;">Hi there.</div>
+    </div>
+  </ion-item>
+
+  <ion-item lines="none">
+    <div class="flex-container-col1">
+      <div class="a" style="color: white">Last night</div>
+      <div class="b" style="color: white">Sleeping habit</div>
+    </div>
+  </ion-item>
+
+  <ion-card style="border-radius: 20px;">
+    <ion-card-header>
+      <ion-card-title>
+        <div class="flex-container-card">
+          <div style="color: #202B73; font-weight: bold;">Overnight</div>
+          <ion-icon name="bed" style="color: #202B73;"></ion-icon>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="flex-container-card-content">
+        <div class="a">
+          <div style="color: #D64B82;">{{getRecentSleepHour()}}</div>
+          <p style="font-size: 18px; color: #202B73; font-weight: bold;">hours</p>
+        </div>
+        <div class="b">
+          <p style="font-size: 18px; color: #202B73; font-weight: bold;">Quality</p>
+          <div style="color: #D64B82; font-weight: bold;">{{getRecentSleepQuality()}}</div>
+        </div>
+        <!-- <div><p style="font-size: 20px">Quality</p>hours</div> -->
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <div class="flex-container-card">
+          <div style="color: #202B73; font-weight: bold;">Sleepiness</div>
+          <ion-icon name="moon" style="color: #202B73;"></ion-icon>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="flex-container-card-content">
+        <div class="a">
+          <div style="color: #D64B82;">{{getRecentSleepinessValue()}}</div>
+          <p style="font-size: 18px; color: #202B73; font-weight: bold;">out of 7</p>
+        </div>
+        <div class="b">
+          <p style="font-size: 18px; color: #202B73; font-weight: bold;">Quality</p>
+          <div style="color: #D64B82; font-weight: bold;">{{getRecentSleepinessQuality()}}</div>
+        </div>
+        <!-- <div><p style="font-size: 20px">Quality</p>hours</div> -->
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
